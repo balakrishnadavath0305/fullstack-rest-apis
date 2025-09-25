@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5 - API CRUD</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">📝 API Integration Form (CRUD)</h1>
+
+    <form id="apiForm" class="p-4 bg-light shadow rounded">
+      <input type="hidden" id="entryId">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input name="name" id="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input name="email" id="email" type="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone</label>
+        <input name="phone" id="phone" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea name="message" id="message" rows="4" class="form-control"></textarea>
+      </div>
+      <button class="btn btn-primary w-100">Submit</button>
+    </form>
+
+    <div id="thankYou" class="alert alert-success mt-4 d-none text-center">
+      ✅ Operation successful!
+    </div>
+
+    <hr class="my-4">
+    <h3 class="text-center">📦 Submitted Entries</h3>
+    <div id="entryList" class="mt-4"></div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
